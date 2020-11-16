@@ -232,6 +232,7 @@ void data_init(t_data *rst, char *pw1_path, char *pw2_path, char *text_path)
 	rst->pw1.str = NULL;
 	rst->pw2.str = NULL;
 	rst->text.str = NULL;
+	rst->rst.str = NULL;
 
 	rst->pw1 = file_read(pw1_path);
 	rst->pw2 = file_read(pw2_path);
@@ -247,4 +248,7 @@ void data_init(t_data *rst, char *pw1_path, char *pw2_path, char *text_path)
 	rst->pw1_list = parse_to_list(rst->pw1.str);
 	rst->pw2_list = parse_to_list(rst->pw2.str);
 	rst->text_list = parse_to_list(rst->text.str);
+	rst->size = 2 * rst->text.len;
+	rst->start_text = 0;
+	rst->start_code = 0;
 }

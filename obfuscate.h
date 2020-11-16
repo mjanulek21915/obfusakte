@@ -28,10 +28,11 @@ typedef struct					s_char_a
 
 typedef struct					s_data
 {
-	int dp;
+	int size;
 	t_char_a pw1;
 	t_char_a pw2;
 	t_char_a text;
+	t_char_a rst;
 	t_cell *pw1_list;
 	t_cell *pw2_list;
 	t_cell *text_list;
@@ -52,6 +53,5 @@ void data_parse_printout(t_cell *rst, int n);
 // void encode(t_data *data, int depth);
 void encode(t_data *data);
 void decode(t_data *data);
-
 
 #endif
